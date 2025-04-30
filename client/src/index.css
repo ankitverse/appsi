@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 15 86% 67%;
+  --secondary-foreground: 60 9.1% 97.8%;
+  --accent: 143 55% 44%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  --dark: 210 11% 15%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 15 86% 67%;
+  --secondary-foreground: 60 9.1% 97.8%;
+  --accent: 143 55% 44%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --dark: 210 11% 15%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-roboto antialiased bg-gray-50 text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter font-bold;
+  }
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.editing-highlight {
+  @apply outline-2 outline-dashed outline-primary;
+}
+
+.drag-hover {
+  @apply border-2 border-dashed border-primary bg-primary/10;
+}
+
+.element-selected {
+  @apply outline-2 outline outline-primary;
+}
+
+.element-wrapper {
+  @apply transition-all duration-150;
+}
+
+.element-wrapper:hover {
+  @apply z-10;
+}
+
+.draggable-element {
+  @apply cursor-move transition-shadow duration-200 hover:shadow-md;
+}
+
+.dragging {
+  @apply opacity-80;
+}
+
+.drop-indicator {
+  @apply border-2 border-dashed border-primary bg-primary/20 absolute pointer-events-none rounded-md;
+}
+
+.studio-content {
+  height: calc(100vh - 64px);
+}
+
+.canvas-container {
+  min-height: 800px;
+}
