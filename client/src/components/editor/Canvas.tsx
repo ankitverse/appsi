@@ -113,6 +113,7 @@ export default function Canvas({
         type: item.type,
         content: getDefaultContent(item.type),
         style: {
+<<<<<<< HEAD
           position: 'absolute',
           left: `${finalX}px`,
           top: `${finalY}px`,
@@ -122,6 +123,13 @@ export default function Canvas({
           ...Object.fromEntries(
             Object.entries(defaultStyleForType).filter(([_, value]) => value !== undefined)
           )
+=======
+          ...defaultStyleForType,
+          position: 'absolute',
+          left: `${x}px`,
+          top: `${y}px`,
+          zIndex: elements.length + 1, // Ensure new elements appear on top
+>>>>>>> a8690e00187076c3634d145746423c32b7aec096
         }
       };
 
